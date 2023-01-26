@@ -1,5 +1,3 @@
-package TiendaDeZapatos_POO;
-
 public class Zapato {
 
     //Zona de Atributos
