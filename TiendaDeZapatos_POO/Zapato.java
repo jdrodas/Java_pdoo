@@ -1,8 +1,8 @@
 public class Zapato {
 
     //Zona de Atributos
-    private String estilo, color;
-    private int talla;
+    protected String estilo, color;
+    protected int talla;
 
     //Zona de Constructor
     public Zapato(){
@@ -35,5 +35,13 @@ public class Zapato {
 
     public String getColor() {
         return color;
+    }
+
+    @Override
+    public String toString() {
+        String resultado =  "Talla: "+ talla +
+                            ", Color: "+ color +
+                            ", Estilo: "+ estilo;
+        return resultado;
     }
 }
