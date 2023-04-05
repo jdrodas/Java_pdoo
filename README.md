@@ -15,3 +15,15 @@ Este repo se encuentra en proceso de actualización a **JDK 17**. Cada proyecto 
 - Revisión de conceptos básicos de programación: condicionales, ciclos, excepciones, funciones, arreglos, clases y objetos
 - Implementación de métodos utilizando parametros por referencia.
 - Actualizado a JDK 17
+
+
+# ---------------------------------------
+
+## Soluciones a examenes anteriores
+
+### Examen No. 2
+
+### [EX02_RiesgoInundacion](https://github.com/jdrodas/Java_pdoo/tree/master/EX02_RiesgoInundacion)
+- Revisión de conceptos básicos de programación orientada a objetos
+- Implementación de diagramas UML de clases
+- Actualizado a JDK 17
