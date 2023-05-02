@@ -16,6 +16,19 @@ Este repo se encuentra en proceso de actualización a **JDK 17**. Cada proyecto 
 - Implementación de métodos utilizando parametros por referencia.
 - Actualizado a JDK 17
 
+### 2. Patrones de Software
+
+### 2.1. Patrones GoF
+
+### 2.1.1. Creacionales
+
+### 2.1.2. Estructurales
+
+### 2.1.3. Comportamiento
+
+### [Poo_PS_GoF_ChainOfResponsibility](https://github.com/jdrodas/Java_pdoo/tree/master/Poo_PS_GoF_ChainOfResponsibility)
+- Patrón GoF de comportamiento Cadena de Responsabilidad (*Chain of Responsibility*)
+
 
 # ---------------------------------------
 
