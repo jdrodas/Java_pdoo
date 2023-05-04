@@ -55,9 +55,12 @@ public class LogicaAprobacionPedido
         jerarquiaEjecutivos = losEjecutivos;
     }
 
-    public String EvaluaJerarquia()
+    public String[] EvaluaJerarquia()
     {
-        String mensajeError = "";
+        //Posición 0: Mensaje de la evaluacion
+        //Posición 1: Motivo de error
+        String[] resultadoEvaluacion = new String[2];
+
 
         //Validar que solamente el último ejecutivo de la jerarquía sea el único sin jefe
         int contadorEjecutivosSinJefe = 0;
@@ -70,14 +73,16 @@ public class LogicaAprobacionPedido
         //Si hay más de un ejecutivo sin jefe, hay error en la jerarquía
         if (contadorEjecutivosSinJefe > 1)
         {
-            mensajeError = "Hay "+ contadorEjecutivosSinJefe + " ejecutivos sin jefe";
-            return mensajeError;
+            resultadoEvaluacion[0] = "Hay "+ contadorEjecutivosSinJefe + " ejecutivos sin jefe";
+            resultadoEvaluacion[1] = "ejecutivos sin jefe";
+            return resultadoEvaluacion;
         }
 
         if (jerarquiaEjecutivos[(jerarquiaEjecutivos.length - 1)].GetJefe() != null)
         {
-            mensajeError = "El último ejecutivo en la jerarquía no es el único sin jefe";
-            return mensajeError;
+            resultadoEvaluacion[0] = "El último ejecutivo en la jerarquía no es el único sin jefe";
+            resultadoEvaluacion[1] = "ultimo no es unico sin jefe";
+            return resultadoEvaluacion;
         }
 
         //Validar con un ciclo que los montos de los ejecutivos sean mayores que cero
@@ -85,10 +90,11 @@ public class LogicaAprobacionPedido
         {
             if (jerarquiaEjecutivos[i].GetMonto() <= 0)
             {
-                mensajeError = "El monto asingado para el ejecutivo " +
+                resultadoEvaluacion[0] = "El monto asingado para el ejecutivo " +
                         jerarquiaEjecutivos[i].GetCargo() + " " +
                         jerarquiaEjecutivos[i].GetNombre() +" no es mayor que cero";
-                return mensajeError;
+                resultadoEvaluacion[1] = "montos negativos";
+                return resultadoEvaluacion;
             }
         }
 
@@ -97,17 +103,19 @@ public class LogicaAprobacionPedido
         {
             if (jerarquiaEjecutivos[i].GetMonto() >= jerarquiaEjecutivos[i + 1].GetMonto())
             {
-                mensajeError = "El monto $" + jerarquiaEjecutivos[i].GetMonto() +
+                resultadoEvaluacion[0] = "El monto $" + jerarquiaEjecutivos[i].GetMonto() +
                         " del ejecutivo " + jerarquiaEjecutivos[i].GetCargo() +
                         " no es inferior al de "+ jerarquiaEjecutivos[i + 1].GetCargo() +
                         " que tiene un monto de " + jerarquiaEjecutivos[i + 1].GetMonto();
-                return mensajeError;
+                resultadoEvaluacion[1] = "montos sin jerarquia";
+                return resultadoEvaluacion;
             }
         }
 
         //Si las validaciones funcionaron correctamente, se da el parte de confianza
-        mensajeError = "correcto";
-        return mensajeError;
+        resultadoEvaluacion[0] = "correcto";
+        resultadoEvaluacion[1] = "sin error";
+        return resultadoEvaluacion;
     }
 
     public String ProcesarPedido()

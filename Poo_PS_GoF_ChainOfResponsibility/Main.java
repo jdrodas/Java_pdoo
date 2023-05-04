@@ -16,9 +16,9 @@ public class Main {
 
         System.out.println("Validamos la integridad de la jerarquía de ejecutivos...");
 
-        String mensajeEvaluacion = laLogica.EvaluaJerarquia();
+        String[] mensajeEvaluacion = laLogica.EvaluaJerarquia();
 
-        if (!mensajeEvaluacion.equals("correcto"))
+        if (!mensajeEvaluacion[0].equals("correcto"))
         {
             System.out.println("Jerarquía errónea. {mensajeEvaluacion}");
             System.out.println("No se puede aprobar pedidos hasta que no se solucione la jerarquía de ejecutivos");
