@@ -30,6 +30,10 @@ Este repo se encuentra en proceso de actualización a **JDK 17**. Cada proyecto 
 - Patrón GoF de comportamiento Cadena de Responsabilidad (*Chain of Responsibility*)
 
 
+### [Poo_PS_GoF_Interator](https://github.com/jdrodas/Java_pdoo/tree/master/Poo_PS_GoF_Interator)
+- Patrón GoF de comportamiento Iterador (*Iterator*)
+
+
 # ---------------------------------------
 
 ## Soluciones a examenes anteriores
