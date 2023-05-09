@@ -11,14 +11,14 @@ public class Main {
         miAlbum.SetLamina(new Lamina(2, "Jugador - Leonel Messi"));
         miAlbum.SetLamina(new Lamina(3, "Equipo - Brasil"));
         miAlbum.SetLamina(new Lamina(4, "Jugador - Cristiano Ronaldo"));
-        miAlbum.SetLamina(new Lamina(7, "Jugador - Neymar"));
+        miAlbum.SetLamina(new Lamina(5, "Jugador - Neymar"));
         miAlbum.SetLamina(new Lamina(6, "Equipo - Japón"));
-        miAlbum.SetLamina(new Lamina(8, "Equipo - Holanda"));
-        miAlbum.SetLamina(new Lamina(9, "Equipo - Mexico"));
+        miAlbum.SetLamina(new Lamina(7, "Equipo - Holanda"));
+        miAlbum.SetLamina(new Lamina(8, "Equipo - Mexico"));
 
         // Creamos el iterador
         Iterador unIterador = miAlbum.CrearIterador();
-        unIterador.SetIncremento(3);
+        unIterador.SetIncremento(6);
 
         System.out.println("Iterando de a " + unIterador.GetIncremento() +
                 " laminas sobre el album: "+ miAlbum.GetNombre());
